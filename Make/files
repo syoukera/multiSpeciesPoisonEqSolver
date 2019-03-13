@@ -1,0 +1,3 @@
+multiSpeciesPoisonEqSolver.C
+
+EXE = $(FOAM_APPBIN)/multiSpeciesPoisonEqSolver
