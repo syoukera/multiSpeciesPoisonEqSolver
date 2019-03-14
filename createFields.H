@@ -89,6 +89,20 @@ volScalarField Qdot
     dimensionedScalar(dimEnergy/dimVolume/dimTime, Zero)
 );
 
+Info<< "Reading field F_EHD\n" << endl;
+volVectorField F_EHD
+(
+    IOobject
+    (
+        "F_EHD",
+        runTime.timeName(),
+        mesh,
+        IOobject::MUST_READ,
+        IOobject::NO_WRITE
+    ),
+    mesh
+);
+
 #include "createDpdt.H"
 
 #include "createK.H"

@@ -8,7 +8,8 @@ tmp<fvVectorMatrix> tUEqn
   + MRF.DDt(rho, U)
   + turbulence->divDevRhoReff(U)
  ==
-    fvOptions(rho, U)
+    F_EHD
+  + fvOptions(rho, U)
 );
 fvVectorMatrix& UEqn = tUEqn.ref();
 
